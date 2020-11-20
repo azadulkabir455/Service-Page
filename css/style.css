@@ -1,6 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 100%px;
+    padding: 0 15px;
+  }
+}
+
+header {
+  background-color: #222222;
+  padding: 50px 0;
+}
+
+header .headerMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerMain .headerContent {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+header .headerMain .headerContent h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: left;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+header .headerMain .headerContent h5 {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #444;
+  margin: 15px 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 15px;
+  letter-spacing: 0;
+}
+
+header .headerMain .headerContent p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 500;
+  text-transform: normal;
+  text-align: left;
+  line-height: 26px;
+  letter-spacing: 0;
+  padding-right: 60px;
+}
+
+header .headerMain .headerContent button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 19px;
+  letter-spacing: 2px;
+  background-color: #E4881B;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+}
+
+header .headerMain .headerImg {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .headerMain .headerImg img {
+  display: block;
+  width: 85%;
+}
+
+header .headerFetures {
+  padding-top: 50px;
+}
+
+header .headerFetures .fetureContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+}
+
+header .headerFetures .fetureContent .icon {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+header .headerFetures .fetureContent .icon span {
+  font-size: 46px;
+}
+
+header .headerFetures .fetureContent .icon .blue {
+  color: #1274E7;
+}
+
+header .headerFetures .fetureContent .icon .green {
+  color: #04E799;
+}
+
+header .headerFetures .fetureContent .icon .yellow {
+  color: #E4881B;
+}
+
+header .headerFetures .fetureContent .text {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+header .headerFetures .fetureContent .text h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: normal;
+  text-align: left;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+header .headerFetures .fetureContent .text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #888;
+  font-weight: 400;
+  text-transform: normal;
+  text-align: left;
+  line-height: 22px;
+  letter-spacing: 0;
+  padding-top: 10px;
 }
 
 .row::after {

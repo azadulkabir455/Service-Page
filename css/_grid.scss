@@ -1,0 +1,27 @@
+// For Responsive
+
+.row::after {
+    content:"";
+    display: table;
+    clear:both;
+}
+[class *="col-"]{
+    float:left;
+    width:100%;
+    padding: 10px;
+}
+@media only screen and (min-width: 768px) {
+    @for $i from 1 through 12 {
+        .col-m-#{$i}{
+            width: unquote(8.33 * $i + "%");
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    @for $i from 1 through 12 {
+        .col-#{$i}{
+            width: unquote( 8.33 * $i + "%");
+        }
+    }
+}
