@@ -11,7 +11,7 @@ $paragraphFont: 'Open Sans', sans-serif;
 * {
     box-sizing: border-box;
     margin:0;
-    padding: 0;
+    padding:0;
 }
 
 @mixin fontProperty($family, $size, $color, $weight, $transform, $align, $lineHeight, $letterSpacing){
@@ -171,6 +171,65 @@ $paragraphFont: 'Open Sans', sans-serif;
         @extend %titleStyle;
         h2 {
             color: #fff;
+        }
+    }
+    .card {
+        @include card(#444444, 4px, 1px 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
+            margin: 0 7.5px;
+        }
+        h2 {
+            @include fontProperty($headingFont, 28px, #fff, 700, normal, center, 45px, 1px);
+        }
+        h3 {
+            @include fontProperty($headingFont, 15px, $paragraphColor, 700, uppercase, center, 22px, 1px);
+        }
+        h5 {
+            @extend %buttonHeading;
+            background-color: #666;
+            text-align: center;
+            color: #aaa;
+            display: block;
+            width: 50%;
+            padding: 10px 25px;
+            margin:15px auto;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                text-align:center;
+                @include fontProperty($paragraphFont, 16px, #888, 400, capitalize, center, 36px, 1px)
+            }
+        }
+        button {
+            @include button{
+                display:block;
+                margin: 20px auto 10px;
+                }
+            }
+            @each $class,$color in (gray: #666, yellow: #E4881B){
+                .#{$class} {
+                    background-color: $color;
+                }
+            }
+        }
+    @each $class,$color in (gray: #666, yellow: #E4881B){
+        .#{$class} {
+            border-top: 3px solid $color;
+        }
+    }
+}
+.company {
+    background-color: $secondaryColor;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;
+        h2 {
+            color: #fff;
+        }
+        p {
+            color: #bdd9fa;
         }
     }
 }
