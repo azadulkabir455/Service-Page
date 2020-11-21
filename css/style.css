@@ -7,6 +7,50 @@
   padding: 0;
 }
 
+.createWebsite .title, .countFacilites .title, .workProcedure .title {
+  padding-left: 7.5px;
+}
+
+.createWebsite .title h2, .countFacilites .title h2, .workProcedure .title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  color: #444444;
+  font-weight: 400;
+  text-transform: normal;
+  text-align: left;
+  line-height: 58px;
+  letter-spacing: 1px;
+}
+
+.createWebsite .title p, .countFacilites .title p, .workProcedure .title p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 400;
+  text-transform: normal;
+  text-align: left;
+  line-height: 26px;
+  letter-spacing: 0;
+  padding-top: 15px;
+  padding-bottom: 45px;
+}
+
+.createWebsite .card h5, .countFacilites h5 {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 15px 0;
+  border-radius: 4px;
+  background-color: #F4F4F4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #888;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+
 .container {
   width: 70%;
   display: block;
@@ -22,7 +66,7 @@
 
 header {
   background-color: #222222;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 header .headerMain {
@@ -171,7 +215,89 @@ header .headerFetures .fetureContent .text p {
   text-align: left;
   line-height: 22px;
   letter-spacing: 0;
-  padding-top: 10px;
+  padding-top: 0;
+}
+
+.createWebsite {
+  background-color: #F4F4F4;
+  padding: 80px 0;
+}
+
+.createWebsite .card {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 45px 30px;
+  margin: 0 7.5px;
+}
+
+.createWebsite .card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #444444;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: left;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+.createWebsite .card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #888;
+  font-weight: 400;
+  text-transform: normal;
+  text-align: left;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+.createWebsite .blue {
+  border-top: 2px solid #1274E7;
+}
+
+.createWebsite .green {
+  border-top: 2px solid #04E799;
+}
+
+.createWebsite .yellow {
+  border-top: 2px solid #E4881B;
+}
+
+.countFacilites {
+  background-color: #fff;
+  padding-top: 80px;
+}
+
+.countFacilites span {
+  font-size: 44px;
+  color: #888;
+}
+
+.countFacilites h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  color: #999999;
+  font-weight: 500;
+  text-transform: normal;
+  text-align: left;
+  line-height: 58px;
+  letter-spacing: 1px;
+}
+
+.countFacilites img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.workProcedure {
+  background-color: #f4f4f4;
+  padding: 80px 0;
 }
 
 .row::after {
@@ -183,7 +309,6 @@ header .headerFetures .fetureContent .text p {
 [class*="col-"] {
   float: left;
   width: 100%;
-  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {

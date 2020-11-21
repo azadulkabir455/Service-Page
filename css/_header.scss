@@ -1,0 +1,83 @@
+header {
+    background-color: $primaryColor;
+    padding: 80px 0;
+    .headerMain {
+        display: flex;
+        align-items: center;
+        .headerContent {
+            flex-basis: 40%;
+            h2 {
+                @include fontProperty($headingFont, 36px, #fff, 400, capitalize, left, 58px, 2px )
+            }
+            h5 {
+                display: inline-block;
+                padding: 10px;
+                border-radius: 4px;
+                background-color: #444;
+                margin: 15px 0;
+                @include fontProperty($paragraphFont, 15px, #fff, 900, uppercase, left,15px, 0);
+            }
+            p {
+                @include fontProperty($paragraphFont, 16px, $paragraphColor, 500, normal, left, 26px, 0);
+                padding-right: 60px;
+            }
+            button {
+                @include fontProperty($headingFont, 14px, #fff, 700, uppercase, center, 19px, 2px);
+                background-color: #E4881B;
+                padding: 10px 25px;
+                border-radius: 50px;
+                border:none;
+                outline:none;
+                margin-top: 20px;
+            }
+        }
+        .headerImg {
+            flex-basis: 60%;
+            display: flex;
+            justify-content: flex-end;
+            img {
+                display: block;
+                width: 85%;
+            }
+        }
+    }
+    .headerFetures {
+        padding-top: 50px;
+        .fetureContent {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            .icon {
+                flex-basis: 20%;
+                span {
+                    font-size: 46px;
+                }
+                // This function is for icon color and simplyfied code in below
+                @each $class, $color in (blue: #1274E7, green: #04E799, yellow: #E4881B) {
+                    .#{$class} {
+                        color: $color;
+                    }
+                }
+                // .blue {
+                //     color: #1274E7;
+                // }
+                // .green {
+                //     color: #04E799;
+                // }
+                // .yellow {
+                //     color: #E4881B;
+                // }
+            }
+            .text {
+                flex-basis: 80%;
+                h3 {
+                    @include fontProperty($paragraphFont, 20px, #fff, 500, normal, left, 36px, 1px );
+                }
+                p {
+                    @include fontProperty($paragraphFont, 14px, #888, 400, normal, left, 22px, 0 );
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
