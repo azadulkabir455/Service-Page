@@ -22,13 +22,7 @@ header {
                 padding-right: 60px;
             }
             button {
-                @include fontProperty($headingFont, 14px, #fff, 700, uppercase, center, 19px, 2px);
-                background-color: #E4881B;
-                padding: 10px 25px;
-                border-radius: 50px;
-                border:none;
-                outline:none;
-                margin-top: 20px;
+                @include button;
             }
         }
         .headerImg {

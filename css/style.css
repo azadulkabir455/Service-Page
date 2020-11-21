@@ -7,11 +7,11 @@
   padding: 0;
 }
 
-.createWebsite .title, .countFacilites .title, .workProcedure .title {
+.createWebsite .title, .countFacilites .title, .workProcedure .title, .pricing .title {
   padding-left: 7.5px;
 }
 
-.createWebsite .title h2, .countFacilites .title h2, .workProcedure .title h2 {
+.createWebsite .title h2, .countFacilites .title h2, .workProcedure .title h2, .pricing .title h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   color: #444444;
@@ -22,7 +22,7 @@
   letter-spacing: 1px;
 }
 
-.createWebsite .title p, .countFacilites .title p, .workProcedure .title p {
+.createWebsite .title p, .countFacilites .title p, .workProcedure .title p, .pricing .title p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #999999;
@@ -35,7 +35,7 @@
   padding-bottom: 45px;
 }
 
-.createWebsite .card h5, .countFacilites h5 {
+.createWebsite .card h5, .countFacilites h5, .workProcedure .card h5 {
   display: inline-block;
   padding: 5px 10px;
   margin: 15px 0;
@@ -137,6 +137,13 @@ header .headerMain .headerContent button {
   border: none;
   outline: none;
   margin-top: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+header .headerMain .headerContent button:hover {
+  background-color: #b66d16;
 }
 
 header .headerMain .headerImg {
@@ -298,6 +305,78 @@ header .headerFetures .fetureContent .text p {
 .workProcedure {
   background-color: #f4f4f4;
   padding: 80px 0;
+}
+
+.workProcedure .card {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 45px 30px;
+  border-top: 2px solid #04E799;
+  margin-right: 15px;
+}
+
+.workProcedure .card span {
+  font-size: 64px;
+  color: #888;
+}
+
+.workProcedure .card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #444444;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: left;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+
+.workProcedure .card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #888;
+  font-weight: 400;
+  text-transform: normal;
+  text-align: left;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+.workProcedure .card button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 19px;
+  letter-spacing: 2px;
+  background-color: #E4881B;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  padding: 8px 15px;
+  font-size: 12px;
+}
+
+.workProcedure .card button:hover {
+  background-color: #b66d16;
+}
+
+.pricing {
+  background-color: #222222;
+  padding: 80px 0;
+}
+
+.pricing .title h2 {
+  color: #fff;
 }
 
 .row::after {

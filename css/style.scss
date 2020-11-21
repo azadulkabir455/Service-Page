@@ -32,6 +32,22 @@ $paragraphFont: 'Open Sans', sans-serif;
 
     @content;
 }
+@mixin button {
+    @include fontProperty($headingFont, 14px, #fff, 700, uppercase, center, 19px, 2px);
+    background-color: #E4881B;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border:none;
+    outline:none;
+    margin-top: 20px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($color: #E4881B, $amount: 10);
+    }
+
+    @content;
+}
 %titleStyle {
     padding-left: 7.5px;
     h2 {
@@ -122,7 +138,41 @@ $paragraphFont: 'Open Sans', sans-serif;
     .title {
         @extend %titleStyle;
     }
+    .card {
+        @include card(#fff, 4px, 0 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
+            border-top: 2px solid #04E799;
+            margin-right: 15px;
+        };
+        span {
+            font-size: 64px;
+            color: #888;
+        }
+        h3 {
+            @include fontProperty($headingFont, 20px, $headingColor, 700, capitalize, left, 32px, 1px);
+        }
+        h5 {
+            @extend %buttonHeading;
+        }
+        p{
+            @include fontProperty($paragraphFont, 16px, #888, 400, normal, left, 26px, 0);
+        }
+        button {
+            @include button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    }
 }
-
+.pricing {
+    background-color: $primaryColor;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;
+        h2 {
+            color: #fff;
+        }
+    }
+}
 
 @import "grid";
