@@ -199,7 +199,7 @@ $paragraphFont: 'Open Sans', sans-serif;
             li {
                 list-style: none;
                 text-align:center;
-                @include fontProperty($paragraphFont, 16px, #888, 400, capitalize, center, 36px, 1px)
+                @include fontProperty($paragraphFont, 16px, #888, 400, capitalize, center, 36px, 0)
             }
         }
         button {
@@ -230,6 +230,46 @@ $paragraphFont: 'Open Sans', sans-serif;
         }
         p {
             color: #bdd9fa;
+        }
+    }
+    .card {
+        padding: 40px 20px;
+        border-radius: 4px;
+        margin-top: 20px;
+        img.logo  {
+            display: block;
+            width: 45%;
+            margin: 5px auto;
+        }
+        p {
+            @include fontProperty($paragraphFont, 16px, #bdd9fa, 400, normal, center, 26px, 0);
+        }
+        h3 {
+            @include fontProperty($paragraphFont, 16px, #fff, 700, normal, center, 26px, 0);
+            padding-top: 15px;
+        }
+        img {
+            display: block;
+            width: 35%;
+            margin: 10px auto;
+        }
+
+    }
+    .deepBlue {
+        background-color: #0f63c5;
+    }
+}
+
+.faq {
+    background-color: #fff;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;  
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
         }
     }
 }
