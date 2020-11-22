@@ -68,6 +68,17 @@ $paragraphFont: 'Open Sans', sans-serif;
     @include fontProperty($headingFont, 12px, #888, 700, uppercase, left, 12px,1px );
 }
 
+%bottomLink {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        a{
+            @include fontProperty($headingFont, 14px, #888, 700, normal, left, 24px, 1px);
+            text-decoration:none;
+        }
+    }
+}
 .container {
     width: 70%;
     display: block;
@@ -79,199 +90,68 @@ $paragraphFont: 'Open Sans', sans-serif;
 }
 
 @import "header";
-
-.createWebsite {
-    background-color: #F4F4F4;
+@import "main";
+footer {
+    background-color: #222222;
     padding: 80px 0;
-    .title {
-        @extend %titleStyle;
-    }
-    .card {
-        @include card(#fff, 4px, 0 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
-            margin: 0 7.5px;
-        };
-        h3 {
-            @include fontProperty($headingFont, 20px, $headingColor, 700, capitalize, left, 32px, 1px);
+    overflow: auto;
+    .topFooter {
+        margin-bottom: 50px;
+        img {
+            width: 40%;
+            padding-left: 10px;
         }
-        h5 {
-            @extend %buttonHeading;
-        }
-        p{
-            @include fontProperty($paragraphFont, 16px, #888, 400, normal, left, 26px, 0);
-        }
-    }
-    @each $class, $borderColor in (blue: #1274E7, green: #04E799, yellow: #E4881B) {
-        .#{$class} {
-            border-top: 2px solid $borderColor;
-        }
-    }
-}
-
-.countFacilites {
-    background-color: #fff;
-    padding-top: 80px;
-    .title {
-        @extend %titleStyle;
-    }
-    span {
-        font-size: 44px;
-        color: #888;
-    }
-    h3 {
-        @include fontProperty($headingFont, 36px, $paragraphColor, 500, normal, left, 58px, 1px);
-    }
-    h5 {
-        @extend %buttonHeading;
-    }
-    img {
-        width: 70%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        margin-top: 25px;
-    }
-}
-
-.workProcedure {
-    background-color: #f4f4f4;
-    padding: 80px 0;
-    .title {
-        @extend %titleStyle;
-    }
-    .card {
-        @include card(#fff, 4px, 0 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
-            border-top: 2px solid #04E799;
-            margin-right: 15px;
-        };
-        span {
-            font-size: 64px;
-            color: #888;
-        }
-        h3 {
-            @include fontProperty($headingFont, 20px, $headingColor, 700, capitalize, left, 32px, 1px);
-        }
-        h5 {
-            @extend %buttonHeading;
-        }
-        p{
-            @include fontProperty($paragraphFont, 16px, #888, 400, normal, left, 26px, 0);
-        }
-        button {
-            @include button {
-                padding: 8px 15px;
-                font-size: 12px;
+        .logoGroup {
+            float: right;
+            span{
+                font-size: 28px;
+                color: #888;
+                margin: 0 7.5px;
             }
         }
     }
-}
-.pricing {
-    background-color: $primaryColor;
-    padding: 80px 0;
-    .title {
-        @extend %titleStyle;
-        h2 {
-            color: #fff;
-        }
-    }
-    .card {
-        @include card(#444444, 4px, 1px 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
-            margin: 0 7.5px;
-        }
-        h2 {
-            @include fontProperty($headingFont, 28px, #fff, 700, normal, center, 45px, 1px);
+    .footerWidget{
+        [class*="col-"]{
+            padding: 0 10px;
         }
         h3 {
-            @include fontProperty($headingFont, 15px, $paragraphColor, 700, uppercase, center, 22px, 1px);
+            @include fontProperty($headingFont, 20px, #fff, 700, normal, left, 32px, 1px);
+            padding: 25px 0 10px 0;
         }
-        h5 {
-            @extend %buttonHeading;
-            background-color: #666;
-            text-align: center;
-            color: #aaa;
-            display: block;
-            width: 50%;
-            padding: 10px 25px;
-            margin:15px auto;
+        p{
+            @include fontProperty($paragraphFont, 16px, $paragraphColor, 400, normal, left, 26px, 0);
         }
         ul {
-            margin: 0;
-            padding: 0;
-            li {
-                list-style: none;
-                text-align:center;
-                @include fontProperty($paragraphFont, 16px, #888, 400, capitalize, center, 36px, 0)
-            }
+           @extend %bottomLink;
         }
         button {
-            @include button{
-                display:block;
-                margin: 20px auto 10px;
-                }
+            @include button(){
+                font-size: 12px;
+                font-weight: 500;
+                padding: 5px 15px;
             }
-            @each $class,$color in (gray: #666, yellow: #E4881B){
-                .#{$class} {
-                    background-color: $color;
-                }
-            }
-        }
-    @each $class,$color in (gray: #666, yellow: #E4881B){
-        .#{$class} {
-            border-top: 3px solid $color;
-        }
-    }
-}
-.company {
-    background-color: $secondaryColor;
-    padding: 80px 0;
-    .title {
-        @extend %titleStyle;
-        h2 {
-            color: #fff;
-        }
-        p {
-            color: #bdd9fa;
         }
     }
     .card {
-        padding: 40px 20px;
+        background-color: #444444;
+        padding:0 0 30px 20px;
         border-radius: 4px;
-        margin-top: 20px;
-        img.logo  {
-            display: block;
-            width: 45%;
-            margin: 5px auto;
-        }
-        p {
-            @include fontProperty($paragraphFont, 16px, #bdd9fa, 400, normal, center, 26px, 0);
-        }
-        h3 {
-            @include fontProperty($paragraphFont, 16px, #fff, 700, normal, center, 26px, 0);
-            padding-top: 15px;
-        }
-        img {
-            display: block;
-            width: 35%;
-            margin: 10px auto;
-        }
-
+        border-top: 2px solid #E4881B;
     }
-    .deepBlue {
-        background-color: #0f63c5;
-    }
-}
-
-.faq {
-    background-color: #fff;
-    padding: 80px 0;
-    .title {
-        @extend %titleStyle;  
-        h2 {
-            text-align: center;
-        }
+    .bottomFooter {
+        margin-top: 50px;
         p {
-            text-align: center;
+            @include fontProperty($paragraphFont, 14px, $paragraphColor, 400, normal, left, 26px, 0);
+            padding-left: 10px;
+        }
+        ul {
+            float:right;    
+            @extend %bottomLink;
+            li {
+                display: inline;
+                padding: 0 10px;
+            }
         }
     }
 }
-
 @import "grid";
