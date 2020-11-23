@@ -1,0 +1,233 @@
+.createWebsite {
+    background-color: #F4F4F4;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;
+    }
+    .card {
+        @include card(#fff, 4px, 0 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
+            margin: 0 7.5px;
+        };
+        h3 {
+            @include fontProperty($headingFont, 20px, $headingColor, 700, capitalize, left, 32px, 1px);
+        }
+        h5 {
+            @extend %buttonHeading;
+        }
+        p{
+            @include fontProperty($paragraphFont, 16px, #888, 400, normal, left, 26px, 0);
+        }
+    }
+    @each $class, $borderColor in (blue: #1274E7, green: #04E799, yellow: #E4881B) {
+        .#{$class} {
+            border-top: 2px solid $borderColor;
+        }
+    }
+}
+
+.countFacilites {
+    background-color: #fff;
+    padding-top: 80px;
+    .title {
+        @extend %titleStyle;
+    }
+    span {
+        font-size: 40px;
+        color: #888;
+    }
+    h3 {
+        @include fontProperty($headingFont, 36px, $paragraphColor, 500, normal, left, 58px, 1px);
+    }
+    h5 {
+        @extend %buttonHeading;
+    }
+    img {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+}
+
+.workProcedure {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;
+    }
+    .card {
+        @include card(#fff, 4px, 0 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
+            border-top: 2px solid #04E799;
+            margin-right: 15px;
+        };
+        span {
+            font-size: 64px;
+            color: #888;
+        }
+        h3 {
+            @include fontProperty($headingFont, 20px, $headingColor, 700, capitalize, left, 32px, 1px);
+        }
+        h5 {
+            @extend %buttonHeading;
+        }
+        p{
+            @include fontProperty($paragraphFont, 16px, #888, 400, normal, left, 26px, 0);
+        }
+        button {
+            @include button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.pricing {
+    background-color: $primaryColor;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;
+        h2 {
+            color: #fff;
+        }
+    }
+    .card {
+        @include card(#444444, 4px, 1px 2px 5px rgba(0, 0, 0, 0.05), 45px 30px){
+            margin: 0 7.5px;
+        }
+        h2 {
+            @include fontProperty($headingFont, 28px, #fff, 700, normal, center, 45px, 1px);
+        }
+        h3 {
+            @include fontProperty($headingFont, 15px, $paragraphColor, 700, uppercase, center, 22px, 1px);
+        }
+        h5 {
+            @extend %buttonHeading;
+            background-color: #666;
+            text-align: center;
+            color: #aaa;
+            display: block;
+            width: 50%;
+            padding: 10px 25px;
+            margin:15px auto;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                text-align:center;
+                @include fontProperty($paragraphFont, 16px, #888, 400, capitalize, center, 36px, 0)
+            }
+        }
+        button {
+            @include button{
+                display:block;
+                margin: 20px auto 10px;
+                }
+            }
+            @each $class,$color in (gray: #666, yellow: #E4881B){
+                .#{$class} {
+                    background-color: $color;
+                }
+            }
+        }
+    @each $class,$color in (gray: #666, yellow: #E4881B){
+        .#{$class} {
+            border-top: 3px solid $color;
+        }
+    }
+}
+.company {
+    background-color: $secondaryColor;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;
+        h2 {
+            color: #fff;
+        }
+        p {
+            color: #bdd9fa;
+        }
+    }
+    .card {
+        padding: 40px 20px;
+        border-radius: 4px;
+        margin-top: 20px;
+        img.logo  {
+            display: block;
+            width: 45%;
+            margin: 5px auto;
+        }
+        p {
+            @include fontProperty($paragraphFont, 16px, #bdd9fa, 400, normal, center, 26px, 0);
+        }
+        h3 {
+            @include fontProperty($paragraphFont, 16px, #fff, 700, normal, center, 26px, 0);
+            padding-top: 15px;
+        }
+        img {
+            display: block;
+            width: 35%;
+            margin: 10px auto;
+        }
+
+    }
+    .deepBlue {
+        background-color: #0f63c5;
+    }
+}
+
+.faq {
+    background-color: #fff;
+    padding: 80px 0;
+    .title {
+        @extend %titleStyle;  
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    .faqContainer {
+        width: 60%;
+        margin: 20px auto;
+        .accordion {     
+            width: 100%;
+            padding:10px 15px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            transition: all .3s linear;
+            @include fontProperty($headingFont, 16px, $paragraphColor, 500, normal, left, 38px, 1px);
+            &:hover {
+                background-color: darken($color:#f5f5f5, $amount: 10);
+            }
+            &:focus {
+                border:none;
+                outline: none;
+            }
+            &::after {
+                content: "\002B";
+                float: right;
+                color: $secondaryColor;
+            }
+        }
+        .active{
+            background-color: darken($color:#f5f5f5, $amount: 10);
+            &::after {
+                content:"\2212";
+            }
+        }
+        .panel {
+            @include fontProperty($paragraphFont, 14px, $paragraphColor, 400, normal, left, 22px,0);
+            padding: 0 15px;
+            overflow:hidden;
+            max-height: 0;
+            transition: all .3s ease-in-out;
+        }
+
+    }
+}

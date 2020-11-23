@@ -14,6 +14,15 @@ $paragraphFont: 'Open Sans', sans-serif;
     padding:0;
 }
 
+::selection {
+    background-color: $primaryColor;
+    color: #f4f4f4;
+    padding: 3px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 @mixin fontProperty($family, $size, $color, $weight, $transform, $align, $lineHeight, $letterSpacing){
     font-family: $family;
     font-size: $size;
@@ -83,75 +92,15 @@ $paragraphFont: 'Open Sans', sans-serif;
     width: 70%;
     display: block;
     margin: 0 auto;
+    margin-top: 80px;
     @media only screen and (max-width: 992px) {
         width: 100%px;
         padding: 0 15px;
     } 
 }
 
+@import "nav";
 @import "header";
 @import "main";
-footer {
-    background-color: #222222;
-    padding: 80px 0;
-    overflow: auto;
-    .topFooter {
-        margin-bottom: 50px;
-        img {
-            width: 40%;
-            padding-left: 10px;
-        }
-        .logoGroup {
-            float: right;
-            span{
-                font-size: 28px;
-                color: #888;
-                margin: 0 7.5px;
-            }
-        }
-    }
-    .footerWidget{
-        [class*="col-"]{
-            padding: 0 10px;
-        }
-        h3 {
-            @include fontProperty($headingFont, 20px, #fff, 700, normal, left, 32px, 1px);
-            padding: 25px 0 10px 0;
-        }
-        p{
-            @include fontProperty($paragraphFont, 16px, $paragraphColor, 400, normal, left, 26px, 0);
-        }
-        ul {
-           @extend %bottomLink;
-        }
-        button {
-            @include button(){
-                font-size: 12px;
-                font-weight: 500;
-                padding: 5px 15px;
-            }
-        }
-    }
-    .card {
-        background-color: #444444;
-        padding:0 0 30px 20px;
-        border-radius: 4px;
-        border-top: 2px solid #E4881B;
-    }
-    .bottomFooter {
-        margin-top: 50px;
-        p {
-            @include fontProperty($paragraphFont, 14px, $paragraphColor, 400, normal, left, 26px, 0);
-            padding-left: 10px;
-        }
-        ul {
-            float:right;    
-            @extend %bottomLink;
-            li {
-                display: inline;
-                padding: 0 10px;
-            }
-        }
-    }
-}
+@import "footer";
 @import "grid";
