@@ -95,10 +95,10 @@ footer .footerWidget ul li a, footer .bottomFooter ul li a {
   margin-top: 80px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .container {
-    width: 100%px;
-    padding: 0 15px;
+    width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -336,6 +336,139 @@ header .headerFetures .fetureContent .text p {
   line-height: 22px;
   letter-spacing: 0;
   padding-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 30px 0;
+  }
+  header .headerMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  header .headerMain .headerContent h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 48px;
+    letter-spacing: 2px;
+  }
+  header .headerMain .headerContent h5 {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #444;
+    margin: 15px auto;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+  header .headerMain .headerContent p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #999999;
+    font-weight: 500;
+    text-transform: normal;
+    text-align: center;
+    line-height: 26px;
+    letter-spacing: 0;
+    padding: 20px;
+  }
+  header .headerMain .headerContent button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 19px;
+    letter-spacing: 2px;
+    background-color: #E4881B;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+  header .headerMain .headerContent button:hover {
+    background-color: #b66d16;
+  }
+  header .headerMain .headerImg {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+  header .headerMain .headerImg img {
+    display: block;
+    width: 75%;
+  }
+  .headerFetures {
+    padding-bottom: 50px;
+  }
+  .headerFetures .fetureContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 15px;
+  }
+  .headerFetures .fetureContent .icon span {
+    font-size: 46px;
+  }
+  .headerFetures .fetureContent .icon .blue {
+    color: #1274E7;
+  }
+  .headerFetures .fetureContent .icon .green {
+    color: #04E799;
+  }
+  .headerFetures .fetureContent .icon .yellow {
+    color: #E4881B;
+  }
+  .headerFetures .fetureContent .text h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: normal;
+    text-align: center !important;
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+  .headerFetures .fetureContent .text p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+    text-transform: normal;
+    text-align: center !important;
+    line-height: 22px;
+    letter-spacing: 0;
+    padding-top: 0;
+  }
 }
 
 .createWebsite {

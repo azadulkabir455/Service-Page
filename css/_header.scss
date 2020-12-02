@@ -8,7 +8,7 @@ header {
         .headerContent {
             flex-basis: 40%;
             h2 {
-                @include fontProperty($headingFont, 36px, #fff, 400, capitalize, left, 58px, 2px )
+                @include fontProperty($headingFont, 36px, #fff, 400, capitalize, left, 58px, 2px );
             }
             h5 {
                 display: inline-block;
@@ -70,6 +70,77 @@ header {
                 }
                 p {
                     @include fontProperty($paragraphFont, 14px, #888, 400, normal, left, 22px, 0 );
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    header {
+        padding: 30px 0;
+        .headerMain {
+            flex-direction: column-reverse;
+            .headerContent {
+                h2 {
+                @include fontProperty($headingFont, 32px, #fff, 400, capitalize, center, 48px, 2px );
+                }
+                h5 {
+                    display: block;
+                    width: 70%;
+                    padding: 10px;
+                    border-radius: 4px;
+                    background-color: #444;
+                    margin: 15px auto;
+                    @include fontProperty($paragraphFont, 15px, #fff, 900, uppercase, center,15px, 0);
+                }
+                p {
+                    @include fontProperty($paragraphFont, 16px, $paragraphColor, 500, normal, center, 26px, 0);
+                    padding: 20px;
+                }
+                button {
+                    @include button;
+                    display: block;
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+            .headerImg {
+                justify-content: center;
+                margin-bottom: 50px;
+                img {
+                    display: block;
+                    width: 75%;
+                }
+            }
+        }
+    }
+    .headerFetures {
+        padding-bottom: 50px;
+        .fetureContent {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px 15px;
+
+            .icon {
+                span {
+                    font-size: 46px;
+                }
+                @each $class, $color in (blue: #1274E7, green: #04E799, yellow: #E4881B) {
+                    .#{$class} {
+                        color: $color;
+                    }
+                }
+            }
+            .text {
+                h3 {
+                    @include fontProperty($paragraphFont, 20px, #fff, 500, normal, center !important, 36px, 1px );
+                }
+                p {
+                    @include fontProperty($paragraphFont, 14px, #888, 400, normal, center !important, 22px, 0 );
                     padding-top: 0;
                 }
             }
